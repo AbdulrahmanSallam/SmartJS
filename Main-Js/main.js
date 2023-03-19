@@ -16,14 +16,27 @@ buttonShow.addEventListener("click", () => {
 let mainLinks = document.querySelectorAll(".main-links a");
 let sections = document.querySelectorAll(".main-title, section.home");
 
-window.addEventListener("scroll", function () {
+addEventListener("scroll", function () {
   sections.forEach(function (s) {
-    mainLinks[0].classList.add("active");
-    if (window.scrollY >= s.offsetTop - 200) {
+    if (scrollY >= s.offsetTop - 200) {
       mainLinks.forEach((e) => {
         e.classList.remove("active");
-        `#${s.id}` == e.getAttribute("href") ? e.classList.add("active") : "";
+        if (`#${s.id}` == e.getAttribute("href")) e.classList.add("active");
       });
     }
   });
 });
+
+// Random Number Color
+let featureNumber = document.querySelectorAll(".feature .container .number");
+
+setInterval(() => {
+  let colour = "#";
+  let colourArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "b", "e", "f"];
+  for (let i = 0; i < 6; i++) {
+    colour += colourArr[Math.floor(Math.random() * colourArr.length)];
+  }
+  featureNumber.forEach((ele) => {
+    ele.style.color = colour;
+  });
+}, 1500);
