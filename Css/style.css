@@ -384,7 +384,6 @@ header .container .main-links a.active {
   animation: textclip 3s linear infinite;
   margin: 0 auto;
 }
-
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -421,7 +420,7 @@ header .container .main-links a.active {
 }
 .about .container {
   display: grid;
-  min-height: 65vh;
+  min-height: 70vh;
   align-items: center;
   place-content: center;
 }
@@ -481,5 +480,44 @@ header .container .main-links a.active {
   .about .container .icons {
     width: 100%;
   }
+}
+.about .container .down {
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: var(--main-hover-color);
+  font-weight: bold;
+  overflow: hidden;
+  padding: 12px 18px;
+  transition: 0.2s transform ease-in-out;
+  width: fit-content;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+.about .container .down::after {
+  content: "";
+  background-color: var(--main-hover-color);
+  border-radius: 3rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  z-index: -1;
+}
+.about .container .down:hover {
+  border: 2px solid transparent;
+  color: white;
+  transform: scale(1.05);
+  will-change: transform;
+}
+.about .container .down:hover::after {
+  transform: translate(0, 0);
 }
 /* End About */
