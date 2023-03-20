@@ -28,7 +28,7 @@ addEventListener("scroll", function () {
 });
 
 // Random Number Color
-let featureNumber = document.querySelectorAll(".feature .container .number");
+let featureNumber = document.querySelectorAll(".number");
 
 setInterval(() => {
   let colour = "#";
