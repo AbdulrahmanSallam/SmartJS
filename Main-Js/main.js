@@ -40,3 +40,16 @@ setInterval(() => {
     ele.style.color = colour;
   });
 }, 1500);
+
+// Rate
+let stars = document.querySelectorAll(".rate .container .info .stars i");
+let countStar = document.querySelector(".rate .container .info p");
+let starsNum = 0;
+
+stars.forEach((ele) => {
+  ele.onmouseenter = () => {
+    ele.classList.toggle("active");
+    starsNum = document.querySelectorAll(".stars i.active").length;
+    countStar.innerHTML = `${starsNum} Star${starsNum > 1 ? "s" : ""}`;
+  };
+});

@@ -572,7 +572,6 @@ header .container .main-links a.active {
 /* End Feature */
 /* Start Libraries */
 .libraries {
-  min-height: 60vh;
   display: grid;
   place-content: center;
 }
@@ -675,3 +674,160 @@ header .container .main-links a.active {
   transform: translate(0, 0);
 }
 /* End Libraries */
+/* Start Explain */
+.explain {
+  display: grid;
+  place-content: center;
+}
+.explain .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 1033px) {
+  .explain .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 337px) {
+  .explain .container {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+.explain .container .box {
+  background-color: var(--main1-box-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+.explain .container .box .number {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  background-color: var(--main1-box-color);
+  border-radius: 50%;
+  border: 5px solid var(--body-color);
+  min-width: 60px;
+  min-height: 60px;
+  display: grid;
+  place-content: center;
+  transition: 0.3s;
+}
+.explain .container .box img {
+  height: 275px;
+  margin: auto;
+  margin: 0 auto;
+  filter: drop-shadow(35px 10px 20px rgba(0, 0, 0, 0.2));
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media (max-width: 345px) {
+  .explain .container .box img {
+    height: 220px;
+  }
+}
+.explain .container .box p {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+}
+.explain .view-all {
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 50px auto;
+  transition: 0.5s;
+  border: 3px solid var(--main-hover-color);
+}
+.explain .view-all:hover {
+  background-color: var(--main-hover-color);
+  transform: scale(1.05);
+}
+/* End Explain */
+/* Start Rate */
+.rate .container {
+  background-color: var(--main1-box-color);
+  border-radius: 12px;
+  border: 5px solid var(--main-hover-color);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+.rate .container .info {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+.rate .container .info .stars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.rate .container .info .stars i {
+  font-size: 75px;
+  color: yellow;
+  font-weight: 200;
+}
+.rate .container .info .stars i.active {
+  font-weight: 900;
+  -webkit-animation-name: fa-spin;
+  animation-name: fa-spin;
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+  animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(
+    --fa-animation-iteration-count,
+    infinite
+  );
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+.rate .container .info p {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.rate .container .info button {
+  margin-top: 25px;
+  background-color: var(--main-hover-color);
+  color: white;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.rate .container img {
+  width: 750px;
+}
+@media (max-width: 902px) {
+  .rate .container img {
+    width: 100%;
+  }
+  .rate .container .info .stars {
+    gap: 15px;
+    justify-content: center;
+  }
+  .rate .container .info .stars i {
+    font-size: 50px;
+  }
+}
+/* End Rate */
