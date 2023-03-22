@@ -758,10 +758,12 @@ header .container .main-links a.active {
 }
 /* End Explain */
 /* Start Rate */
+.rate {
+  margin-bottom: 75px;
+}
 .rate .container {
   background-color: var(--main1-box-color);
   border-radius: 12px;
-  border: 5px solid var(--main-hover-color);
   padding: 25px;
   display: flex;
   align-items: center;
@@ -779,7 +781,7 @@ header .container .main-links a.active {
   gap: 30px;
 }
 .rate .container .info .stars i {
-  font-size: 75px;
+  font-size: 65px;
   color: yellow;
   font-weight: 200;
 }
@@ -800,7 +802,6 @@ header .container .main-links a.active {
 .rate .container .info p {
   color: white;
   font-size: 50px;
-  font-weight: bold;
   margin: 0;
   letter-spacing: 1px;
 }
@@ -810,13 +811,13 @@ header .container .main-links a.active {
   color: white;
   border: none;
   font-size: 30px;
-  font-weight: bold;
   border-radius: 10px;
   padding: 0 20px;
   cursor: pointer;
 }
 .rate .container img {
   width: 750px;
+  filter: drop-shadow(35px 10px 20px rgba(0, 0, 0, 0.5294117647));
 }
 @media (max-width: 902px) {
   .rate .container img {
@@ -831,3 +832,19 @@ header .container .main-links a.active {
   }
 }
 /* End Rate */
+/* Start Footer */
+footer {
+  background-color: var(--main1-box-color);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+footer p {
+  margin: 0;
+  color: white;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+/* End Footer */
